@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Таблица</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <caption>
+          Таблица пользователей
+        </caption>
+        <thead>
+          <tr>
+            <th data-sort="firstName">Имя</th>
+            <th data-sort="lastName">Фамилия</th>
+            <th data-sort="about">Описание</th>
+            <th data-sort="eyeColor">Цвет глаз</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+
+      <div class="right-panel">
+        <div class="edit-form" id="edit-form">
+          <h3>Редактирование пользователя</h3>
+          <form id="user-edit-form">
+            <div class="form-group">
+              <label for="edit-firstName">Имя:</label>
+              <input
+                type="text"
+                id="edit-firstName"
+                name="firstName"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="edit-lastName">Фамилия:</label>
+              <input type="text" id="edit-lastName" name="lastName" required />
+            </div>
+            <div class="form-group">
+              <label for="edit-about">Описание:</label>
+              <textarea
+                id="edit-about"
+                name="about"
+                required
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="edit-eyeColor">Цвет глаз:</label>
+              <select id="edit-eyeColor" name="eyeColor" required>
+                <option value="blue">Голубые</option>
+                <option value="brown">Карие</option>
+                <option value="green">Зеленые</option>
+                <option value="red">Красные</option>
+              </select>
+            </div>
+            <div class="form-buttons">
+              <button type="submit" class="save-btn">Сохранить</button>
+              <button type="button" class="cancel-btn">Отмена</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="controls">
+          <h4>Фильтр по цвету глаз</h4>
+          <button class="filter-btn active" data-filter="all">Все цвета</button>
+          <button class="filter-btn" data-filter="blue">Голубые глаза</button>
+          <button class="filter-btn" data-filter="brown">Карие глаза</button>
+          <button class="filter-btn" data-filter="green">Зеленые глаза</button>
+          <button class="filter-btn" data-filter="red">Красные глаза</button>
+        </div>
+
+        <div class="search-section">
+          <h4>Поиск</h4>
+          <form class="form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Введите имя или фамилию"
+            />
+            <button type="button" class="input-btn" id="search-btn">
+              Найти
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
