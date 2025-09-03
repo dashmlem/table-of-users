@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Основной контейнер всего приложения -->
     <div class="container">
       <table>
         <caption>
@@ -23,6 +24,17 @@
         <tbody id="table-body"></tbody>
       </table>
 
+      <!--навигация по страницам -->
+      <div id="pagination" class="pagination">
+        <!-- Кнопка перехода на предыдущую страницу -->
+        <button id="prev-page" class="pagination-btn">← Назад</button>
+        <!-- Информация о текущей странице и общем количестве -->
+        <span id="page-info">Страница 1 из 1</span>
+        <!-- Кнопка перехода на следующую страницу -->
+        <button id="next-page" class="pagination-btn">Вперед →</button>
+      </div>
+
+      <!-- Правая панель с элементами управления -->
       <div class="right-panel">
         <div class="edit-form" id="edit-form">
           <h3>Редактирование пользователя</h3>
@@ -40,6 +52,7 @@
               <label for="edit-lastName">Фамилия:</label>
               <input type="text" id="edit-lastName" name="lastName" required />
             </div>
+            <!-- Поле для редактирования описания -->
             <div class="form-group">
               <label for="edit-about">Описание:</label>
               <textarea
@@ -65,6 +78,7 @@
           </form>
         </div>
 
+        <!-- Блок фильтрации по цвету глаз -->
         <div class="controls">
           <h4>Фильтр по цвету глаз</h4>
           <button class="filter-btn active" data-filter="all">Все цвета</button>
@@ -86,6 +100,22 @@
               Найти
             </button>
           </form>
+        </div>
+        <div class="column-controls">
+          <h4>Видимость колонок</h4>
+          <!-- Чекбоксы для показа/скрытия колонок -->
+          <label class="column-checkbox">
+            <input type="checkbox" data-column="firstName" checked /> Имя
+          </label>
+          <label class="column-checkbox">
+            <input type="checkbox" data-column="lastName" checked /> Фамилия
+          </label>
+          <label class="column-checkbox">
+            <input type="checkbox" data-column="about" checked /> Описание
+          </label>
+          <label class="column-checkbox">
+            <input type="checkbox" data-column="eyeColor" checked /> Цвет глаз
+          </label>
         </div>
       </div>
     </div>

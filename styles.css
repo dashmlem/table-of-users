@@ -82,12 +82,12 @@ th:hover {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  min-width: 300px;
+  gap: 10px;
+  min-width: 200px;
 }
 
 .edit-form {
-  width: 100%;
+  width: 85%;
   background-color: #18191c;
   padding: 20px;
   border-radius: 8px;
@@ -212,7 +212,7 @@ th:hover {
   margin-top: 0;
   margin-bottom: 15px;
   text-align: center;
-  color: #09c5f0;
+  color: white;
 }
 
 .input-btn {
@@ -252,4 +252,65 @@ th:hover {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(#21d4fd, snow);
   border-radius: 100px;
+}
+
+.pagination-btn {
+  color: white;
+  background-color: transparent;
+  border-color: #09c5f0ff;
+  height: 20px;
+  border-radius: 30px;
+}
+/* Стили для цветных кружков */
+.color-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.color-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #09c5f0;
+  display: inline-block;
+}
+
+.sort-value {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* Стили для управления колонками */
+.column-controls {
+  background-color: #18191c;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #09c5f0;
+}
+
+.column-controls h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+}
+
+.column-checkbox {
+  display: block;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.column-checkbox:hover {
+  background-color: #2a2b2e;
+}
+
+.column-checkbox input {
+  margin-right: 10px;
+  cursor: pointer;
 }
